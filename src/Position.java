@@ -5,6 +5,7 @@ public class Position {
 	private double hSalary;//Position Salary
 	private boolean available;//Position Availability
 	private boolean jobType; //Full Time [True] Part Time [False];
+	//private double yearlySalary;
 	
 	public Position(String pCode, int rank, double salary, boolean availability, boolean jobType) {
 		setPositionCode(pCode);
@@ -66,10 +67,17 @@ public class Position {
 	 * @return 
 	 */
 	public double getYearlySalary() {
+		if(jobType){
+			
+			return 40*hSalary*4.5*12;
+			
+		}else{
+			return 20*hSalary*4.5*12;
+		}
 		
 		//Add Code Here [You have to use If/Else to get graded]
 		
-		return 0; //Temporal Return
+		//return yearlySalary; //Temporal Return
 		
 	}
 }
